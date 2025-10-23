@@ -1,0 +1,88 @@
+/* ===== Contenedor y tarjetas ===== */
+.do-container { display: grid; gap: 16px; }
+.do-card {
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 14px;
+  padding: 16px;
+  box-shadow:
+    0 1px 0 #f3f4f6 inset,
+    0 -1px 0 #f3f4f6 inset,
+    0 8px 20px rgba(0, 0, 0, 0.06);
+}
+
+/* ===== Título azul ===== */
+.do-title-row {
+  display: flex; align-items: baseline; gap: 12px;
+  padding-bottom: 10px; border-bottom: 2px solid #e5e7eb; margin-bottom: 12px;
+}
+.do-title { margin: 0; color: #1d4ed8; letter-spacing: .5px; }
+
+/* ===== Lista Formulario 1 (no editable, azul) ===== */
+.do-list-azul {
+  list-style: disc inside;
+  margin: 0; padding: 0;
+  color: #1d4ed8;
+  background: #eff6ff;        /* azul claro */
+  border: 1px solid #bfdbfe;  /* borde azul */
+  border-radius: 10px;
+  padding: 12px 14px;
+}
+.do-list-azul li { margin: 6px 0; }
+.do-list-key { font-weight: 700; }
+.do-multiline { line-height: 1.5; }
+
+/* ===== Encabezados de sección ===== */
+.do-section-head { display: flex; align-items: center; gap: 10px; margin-bottom: 10px; }
+.do-section-head h3 { margin: 0; }
+.do-hint { font-size: 0.85rem; color: #64748b; }
+
+/* ===== Tabla genérica ===== */
+.do-table-wrap { overflow: auto; border: 1px solid #e5e7eb; border-radius: 10px; }
+.do-table { width: 100%; border-collapse: collapse; background: #ffffff; }
+.do-table thead th {
+  background: #f8fafc; text-align: left; font-weight: 600; color: #0f172a;
+  border-bottom: 1px solid #e5e7eb; padding: 10px 12px;
+}
+.do-table td { border-bottom: 1px solid #f1f5f9; padding: 10px 12px; color: #1f2937; }
+.do-table .num { text-align: right; }
+
+/* ===== Chips de estado (colores igual que Formulario 3) ===== */
+.do-chip {
+  display: inline-block;
+  padding: 4px 10px;
+  border-radius: 999px;
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: #fff;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+/* 🔴 Bajo */
+.do-chip.bad { background: #e11d48; }
+/* 🟢 OK */
+.do-chip.ok { background: #16a34a; }
+/* 🟡 Alto */
+.do-chip.warn { background: #d97706; }
+
+/* ===== Semáforos (Formulario 3) ===== */
+.do-status-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; }
+.do-status-box {
+  border-radius: 12px; padding: 14px; color: #fff;
+  display: grid; gap: 6px; box-shadow: 0 8px 20px rgba(0,0,0,.06);
+}
+.do-status-title { font-weight: 700; }
+.do-status-desc { opacity: .95; }
+.do-status-box.rojo { background: #e11d48; }
+.do-status-box.verde { background: #16a34a; }
+.do-status-box.amarillo { background: #d97706; }
+
+/* ===== Acciones ===== */
+.do-actions { display: flex; justify-content: flex-end; gap: 10px; margin-top: 8px; }
+.ani-btn { border-radius: 10px; padding: 10px 14px; border: none; cursor: pointer; }
+.ani-btn.primary { background: #2563eb; color: #fff; }
+.ani-btn.ghost { background: #f8fafc; color: #111827; border: 1px solid #e5e7eb; }
+
+/* ===== Responsivo ===== */
+@media (max-width: 900px) {
+  .do-status-grid { grid-template-columns: 1fr; }
+}

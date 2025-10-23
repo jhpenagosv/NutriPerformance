@@ -1,0 +1,113 @@
+:root{
+  --blue:#1976d2;
+  --blue-dark:#145ca1;
+  --text:#1a1a1a;
+  --muted:#5f6b7a;
+  --card-bg:#fff;
+  --shadow:0 10px 20px rgba(0,0,0,.08);
+  --radius:14px;
+}
+
+/* Contenedor general */
+.acerca{
+  max-width: 1100px;
+  margin: 24px auto;
+  padding: 0 16px;
+  color: var(--text);
+}
+
+/* Título y línea */
+.acerca__title{
+  text-align: center;
+  color: var(--blue);
+  font-weight: 800;
+  margin: 0 0 8px;
+}
+.acerca__divider{
+  height: 4px;
+  background: var(--blue);
+  border: 0;
+  margin: 0 auto 18px;
+  width: min(320px, 60%);
+  border-radius: 999px;
+}
+
+/* Intro */
+.acerca__intro{
+  text-align: center;
+  color: var(--muted);
+  margin: 0 auto 26px;
+  line-height: 1.6;
+  max-width: 880px;
+}
+
+/* Grid de tarjetas */
+.acerca__cards{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+
+/* Tarjeta / “formulario” */
+.acerca-card{
+  background: var(--card-bg);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 18px;
+  display: flex;
+  flex-direction: column;
+  min-height: 260px;
+}
+
+/* Título de tarjeta y línea */
+.acerca-card__title{
+  text-align: center;
+  color: var(--blue);
+  font-weight: 800;
+  margin: 0 0 8px;
+  font-size: 20px;
+}
+.acerca-card__divider{
+  height: 3px;
+  background: var(--blue);
+  border: 0;
+  margin: 0 auto 12px;
+  width: 160px;
+  border-radius: 999px;
+}
+
+.acerca-card__text{
+  color: var(--text);
+  line-height: 1.6;
+  margin: 0 0 16px;
+  text-align: left;
+}
+
+/* Botón descargar */
+.btn-download{
+  margin-top: auto;              /* empuja el botón hacia abajo */
+  align-self: center;
+  display: inline-block;
+  text-decoration: none;
+  background: var(--blue);
+  color: #fff;
+  padding: 10px 16px;
+  border-radius: 10px;
+  font-weight: 600;
+  transition: transform .05s ease, background .25s ease;
+  box-shadow: 0 6px 14px rgba(25,118,210,.25);
+}
+.btn-download:hover{
+  background: var(--blue-dark);
+}
+.btn-download:active{
+  transform: translateY(1px);
+}
+
+/* Responsivo */
+@media (max-width: 1024px){
+  .acerca__cards{ grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 640px){
+  .acerca__cards{ grid-template-columns: 1fr; }
+}

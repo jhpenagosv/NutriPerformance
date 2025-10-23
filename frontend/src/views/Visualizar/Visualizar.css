@@ -1,0 +1,54 @@
+.visual-wrapper{
+  padding: 16px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.visual-title{
+  color:#1976d2;
+  font-weight:800;
+  margin: 0 0 12px;
+}
+
+/* Secciones y tablas */
+.viz-section{ margin-bottom: 18px; }
+.viz-h{
+  font-weight: 800;
+  color:#1976d2;
+  margin-bottom: 6px;
+}
+.viz-note{
+  display:inline-block;
+  margin-left:8px;
+  padding:2px 8px;
+  border-radius:999px;
+  background:#eaf2fd;
+  border:1px solid #d7e6fb;
+  color:#1976d2;
+  font-size:12px;
+  font-weight:700;
+}
+
+/* Tabla base */
+.viz-table{
+  width: 100%;
+  border-collapse: collapse;
+  border: 1px solid #e3e7ef;
+}
+.viz-th{
+  background:#f7f9fc;
+  text-align:center;
+  padding:8px 6px;
+  border-bottom:1px solid #e3e7ef;
+  font-weight:700;
+  font-size:13px;
+  color:#283444;
+}
+.viz-td{
+  padding:8px 6px;
+  border-top:1px solid #eef2f7;
+  text-align:center;
+}
+.viz-td.left{ text-align:left; }
+.viz-td.mono{
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas;
+}

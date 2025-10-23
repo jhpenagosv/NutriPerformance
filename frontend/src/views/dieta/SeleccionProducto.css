@@ -1,0 +1,137 @@
+/* Tarjeta contenedora */
+.sp-card{
+  background:#fff;
+  border:1px solid #d9e4f7;
+  border-radius:12px;
+  box-shadow:0 8px 22px rgba(25,118,210,.12);
+  padding:16px;
+}
+
+/* Header */
+.sp-header{ position:relative; padding-bottom:8px; }
+.sp-title{
+  margin:0; text-align:center; color:#1976d2;
+  font-size:22px; font-weight:800;
+}
+.sp-add{
+  position:absolute; right:0; top:50%; transform:translateY(-50%);
+}
+
+/* Paneles */
+.sp-panels{
+  display:flex; gap:16px; margin-top:12px;
+  align-items:flex-start;
+}
+.sp-panel{
+  flex:1;
+  background:#fff;
+  border:1px solid #e7ecf6;
+  border-radius:12px;
+  box-shadow:0 8px 22px rgba(25,118,210,.08);
+  padding:12px;
+}
+.sp-panel-title{
+  margin:0; text-align:center; color:#1976d2;
+  font-weight:800; font-size:18px;
+}
+.sp-panel-underline{
+  height:2px; background:#1976d2;
+  border-radius:999px; margin:8px 0 10px;
+}
+
+/* Listas */
+.sp-list-one{               /* 1 columna */
+  display:block;
+}
+.sp-list-grid{              /* 2–3 columnas responsive */
+  display:grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap:10px 16px;
+}
+@media (max-width: 1000px){
+  .sp-list-grid{ grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (max-width: 640px){
+  .sp-panels{ flex-direction:column; }
+  .sp-list-grid{ grid-template-columns: 1fr; }
+}
+
+/* Ítems */
+.sp-item{
+  display:flex; align-items:center; gap:10px;
+  border:1px solid #e7ecf6; border-radius:8px;
+  padding:8px 10px; cursor:pointer;
+  transition:background .15s ease, border-color .15s ease;
+  margin-bottom:8px;
+}
+.sp-item input{ margin:0; }
+.sp-item:hover{ background:#f8fbff; border-color:#d7e5ff; }
+.sp-item.checked{ background:#f5faff; border-color:#cfe0fb; }
+
+/* Vacío / mensajes */
+.sp-warn{
+  margin-top:10px; text-align:center;
+  background:#fff8e1; color:#8a6d3b; border:1px solid #ffecb5;
+  border-radius:8px; padding:8px 10px;
+}
+.sp-empty{
+  text-align:center; color:#5b6b83;
+  padding:8px 4px;
+}
+
+/* Botones base (heredan de otros CSS si existen) */
+.sp-btn{
+  border:0; border-radius:8px; padding:8px 14px;
+  font-weight:700; cursor:pointer;
+}
+.sp-btn-primary{ background:#1976d2; color:#fff; }
+.sp-btn-primary:hover{ filter:brightness(1.05); }
+.sp-btn-outline{
+  background:transparent; color:#1976d2; border:2px solid #1976d2;
+}
+.sp-btn-outline:hover{ background:rgba(25,118,210,.08); }
+
+/* Acciones al pie */
+.sp-actions{
+  display:flex; justify-content:center; gap:12px; margin-top:12px;
+}
+/* fila buscador */
+.sp-search-row{ display:flex; gap:8px; margin:6px 0 10px; }
+.sp-search{
+  flex:1; border:1px solid #cfd6e4; border-radius:6px;
+  padding:6px 8px; font-size:14px;
+}
+.sp-search:focus{
+  outline:none; border-color:#1976d2; box-shadow:0 0 0 3px rgba(25,118,210,.15);
+}
+.sp-search-btn{
+  border:0; border-radius:8px; padding:8px 12px; font-weight:700;
+  background:#1976d2; color:#fff; cursor:pointer;
+}
+.sp-search-btn:hover{ filter:brightness(1.05); }
+.sp-clear{
+  border:2px solid #1976d2; background:transparent; color:#1976d2;
+  border-radius:8px; padding:6px 10px; font-weight:700; cursor:pointer;
+}
+.sp-clear:hover{ background:rgba(25,118,210,.08); }
+/* Mensaje visual ("toast") */
+.sp-toast {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  background: #1976d2;
+  color: #fff;
+  padding: 12px 18px;
+  border-radius: 8px;
+  box-shadow: 0 8px 24px rgba(25,118,210,.25);
+  font-weight: 600;
+  animation: fadeInOut 3s ease forwards;
+  z-index: 999;
+}
+
+@keyframes fadeInOut {
+  0% { opacity: 0; transform: translateY(20px); }
+  10% { opacity: 1; transform: translateY(0); }
+  90% { opacity: 1; transform: translateY(0); }
+  100% { opacity: 0; transform: translateY(20px); }
+}

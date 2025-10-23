@@ -1,0 +1,99 @@
+/* Tarjeta y título (mantén tu estilo existente si ya lo tienes) */
+.rp-card { padding: 10px 12px; }
+.rp-title {
+  text-align: center;
+  color: #1976d2;
+  font-weight: 800;
+  margin: 6px 0 4px;
+}
+.rp-underline {
+  height: 3px;
+  background: #1976d2;
+  border-radius: 2px;
+  margin: 0 0 12px;
+}
+
+/* ===== Tabla en 4 columnas ===== */
+.rp-table { display: block; }
+
+/* Cabecera y filas con grid */
+.rp-header,
+.rp-row {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr; /* Producto | Costo | Mín | Máx */
+  column-gap: 16px;
+  align-items: center;
+}
+
+/* Cabecera */
+.rp-header {
+  font-weight: 800;
+  color: #0f3f8c;
+  border-bottom: 1px solid #dbe5f9;
+  padding: 8px 0;
+  margin-bottom: 6px;
+}
+
+/* Filas */
+.rp-row {
+  padding: 8px 0;
+  border-bottom: 1px dashed #e6eefc;
+}
+.rp-row:last-child { border-bottom: none; }
+
+/* Celdas e inputs */
+.rp-cell { display: block; }
+.rp-name { font-weight: 600; color: #334155; }
+
+.rp-input {
+  width: 100%;
+  box-sizing: border-box;
+  border: 1px solid #cfe0ff;
+  border-radius: 8px;
+  padding: 8px 10px;
+  outline: none;
+  transition: border-color .15s ease, box-shadow .15s ease;
+}
+.rp-input:focus {
+  border-color: #1976d2;
+  box-shadow: 0 0 0 3px rgba(25,118,210,.12);
+}
+
+/* Vacío / aviso */
+.rp-empty, .rp-warn {
+  margin: 10px 0;
+  text-align: center;
+  color: #5b6b83;
+}
+
+/* Acciones */
+.rp-actions {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 14px;
+}
+.rp-btn {
+  border: none;
+  border-radius: 8px;
+  padding: 8px 14px;
+  font-weight: 700;
+  cursor: pointer;
+}
+.rp-btn-outline {
+  background: #f1f5fb;
+  color: #111827;
+}
+.rp-btn-primary {
+  background: #1976d2;
+  color: #fff;
+}
+
+/* ===== Responsive: apilar en móviles ===== */
+@media (max-width: 760px) {
+  .rp-header, .rp-row {
+    grid-template-columns: 1fr; /* apila las columnas */
+    row-gap: 6px;
+  }
+  .rp-header { display: none; } /* ocultar cabecera en móviles si prefieres */
+}

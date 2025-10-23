@@ -1,0 +1,51 @@
+/* ===== Barra de navegación ===== */
+.navbar {
+  display: flex;
+  align-items: center;
+  background-color: #1976d2;        /* azul */
+  padding: 10px 20px;
+  box-shadow: 0 2px 4px rgba(0,0,0,.1);
+
+  position: sticky;                  /* o fixed si quieres siempre visible */
+  top: 0;
+  z-index: 10;                       /* encima de todo */
+}
+
+/* Contenedor: logo + título + links */
+.navbar-left {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.navbar-logo {
+  height: 40px;
+  width: auto;
+}
+
+.navbar-title {
+  color: #fff;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+/* Links de navegación */
+.navbar-links {
+  display: flex;
+  gap: 8px;
+  margin-left: 12px;
+}
+
+.nav-link {
+  background-color: #1976d2;
+  color: #fff;
+  text-decoration: none;
+  padding: 6px 12px;
+  border-radius: 6px;
+  font-size: 15px;
+  font-weight: 500;
+  transition: background .25s ease, transform .05s ease;
+}
+
+.nav-link:hover { background-color: #145ca1; }
+.nav-link:active { transform: translateY(1px); }
