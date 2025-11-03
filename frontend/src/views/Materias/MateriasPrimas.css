@@ -1,0 +1,232 @@
+/* ================== Variables ================== */
+:root{
+  --np-primary: #00482B;
+  --np-primary-15: rgba(0, 72, 43, .15);
+  --np-accent: #DAAA00;
+  --np-border: #e4f0e9;
+  --np-border-2: #d9ebdf;
+  --np-text: #4D4D4D;
+  --np-muted: #5f6b61;
+  --np-white: #ffffff;
+  --np-shadow: 0 8px 22px rgba(0,72,43,.08);
+}
+
+/* ================== Wrapper / Layout ================== */
+.prod-wrapper{ padding: 10px; }
+
+.mp-layout{
+  display: grid;
+  grid-template-columns: 1fr 2fr; /* Izq: lista; Der: detalles */
+  gap: 14px;
+  align-items: start;
+  margin: 8px auto;
+  max-width: 1280px;
+}
+
+/* Paneles (estilos separados) */
+.mega-panel,
+.panel-der{
+  background: var(--np-white);
+  border: 1px solid var(--np-border);
+  border-radius: 12px;
+  box-shadow: var(--np-shadow);
+}
+.mega-panel{ padding: 14px; min-width: 300px; }
+.panel-der{ padding: 10px 12px; min-width: 420px; }
+
+/* ================== Títulos y subrayado ================== */
+.sub-title{
+  color: var(--np-primary);
+  font-size: 18px;
+  font-weight: 800;
+  margin: 2px 2px 6px;
+}
+.sub-underline{
+  height: 4px;
+  width: 100%;
+  background: linear-gradient(90deg, var(--np-primary) 0%, var(--np-accent) 100%);
+  border-radius: 3px;
+  margin-bottom: 8px;
+}
+.sub-underline.small{ height: 3px; margin-bottom: 6px; }
+
+.panel-title{
+  font-size: 18px;
+  font-weight: 800;
+  color: var(--np-primary);
+  margin: 0 0 6px;
+}
+.panel-title.center{ text-align: center; }
+
+/* ================== FORM IZQUIERDO ================== */
+/* Contenedor del form: Filtro arriba, luego input+botones */
+.sub-search{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+/* Fila 1 (arriba): solo el select */
+.sub-search-row.top{
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 8px;
+}
+/* Fila 2 (abajo): input + botón(es) */
+.sub-search-row.bottom{
+  display: grid;
+  grid-template-columns: 1fr auto auto;
+  gap: 8px;
+}
+
+.sub-input{
+  border: 1px solid var(--np-border-2);
+  border-radius: 8px;
+  padding: 8px 10px;
+  outline: none;
+  font-size: 14px;
+  background: #fff;
+  color: var(--np-text);
+}
+.sub-input:focus{
+  border-color: var(--np-primary);
+  box-shadow: 0 0 0 3px var(--np-primary-15);
+}
+
+.sub-btn{
+  background: var(--np-accent);
+  color: #1b1b1b;
+  border: none;
+  border-radius: 8px;
+  font-weight: 700;
+  padding: 8px 12px;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: filter .2s ease, transform .05s ease;
+}
+.sub-btn:hover{ filter: brightness(.95); }
+.sub-btn:active{ transform: translateY(1px); }
+.sub-btn-clear{
+  background: #f9f9f7;
+  color: var(--np-primary);
+  border: 1px solid var(--np-primary);
+}
+
+/* ================== Lista con scroll (panel izquierdo) ================== */
+.sub-list{
+  max-height: 420px;          /* ~10-11 ítems visibles */
+  overflow-y: auto;
+  border: 1px solid var(--np-border);
+  border-radius: 10px;
+  padding: 8px;
+  background: #fff;
+}
+.sub-item{
+  background: #fff;
+  border: 1px solid var(--np-border-2);
+  border-radius: 10px;
+  padding: 8px 10px;
+  margin-bottom: 6px;
+  line-height: 18px;
+  color: var(--np-text);
+  font-size: 14px;
+  cursor: pointer;
+  transition: background .15s ease, box-shadow .15s ease, transform .05s ease;
+}
+.sub-item:last-child{ margin-bottom: 0; }
+.sub-item:hover{ background: #f0f8f3; }
+.sub-item.active{
+  border-color: var(--np-primary);
+  box-shadow: 0 0 0 3px var(--np-primary-15);
+}
+.sub-chip{
+  font-size: 12px;
+  background: #e4f0ea;
+  color: var(--np-primary);
+  padding: 3px 8px;
+  border-radius: 999px;
+  border: 1px solid #dcebe3;
+  display: inline-block;
+  margin-top: 4px;
+}
+
+/* Scrollbar institucional izquierda */
+.sub-list::-webkit-scrollbar{ width: 10px; }
+.sub-list::-webkit-scrollbar-track{ background: #edf5ee; border-radius: 10px; }
+.sub-list::-webkit-scrollbar-thumb{ background: #cce1d5; border-radius: 10px; border: 2px solid #edf5ee; }
+.sub-list::-webkit-scrollbar-thumb:hover{ background: #b7d4c4; }
+
+/* ================== Panel derecho (compacto) ================== */
+.det-help{
+  text-align: center;
+  margin: 4px 0 6px;
+  color: var(--np-muted);
+  font-size: 14px;
+}
+
+/* encabezado: nombre + chip pegados */
+.det-head{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  margin: 2px 0 6px;
+}
+.det-mp{
+  margin: 0;
+  color: var(--np-primary);
+  font-size: 16px;
+}
+.det-chip{
+  font-size: 12px;
+  background: #e4f0ea;
+  color: var(--np-primary);
+  padding: 3px 8px;
+  border-radius: 999px;
+  border: 1px solid #dcebe3;
+}
+
+/* grilla compacta */
+.det-grid{
+  display: grid;
+  grid-template-columns: repeat(4, minmax(120px, 1fr));
+  gap: 8px;
+  margin-top: 4px;
+}
+.det-item{
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.det-label{
+  font-size: 13px;
+  color: var(--np-text);
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.det-code{
+  font-weight: 800;
+  color: var(--np-primary);
+  letter-spacing: .2px;
+}
+.det-input{
+  width: 150px;
+  max-width: 100%;
+  border: 1px solid var(--np-border-2);
+  border-radius: 8px;
+  padding: 6px 8px;
+  background: #fff;
+  color: var(--np-text);
+  outline: none;
+}
+.det-input:focus{
+  border-color: var(--np-primary);
+  box-shadow: 0 0 0 3px var(--np-primary-15);
+}
+
+/* ================== Responsive ================== */
+@media (max-width: 1100px){
+  .mp-layout{ grid-template-columns: 1fr; }
+  .det-grid{ grid-template-columns: repeat(2, minmax(120px, 1fr)); }
+}

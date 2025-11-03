@@ -1,0 +1,71 @@
+export const RN_DATA = [
+    { id: "1", nombre: "Consumo de materia seca", sigla: "CMS", unidad: "kg/d" },
+    { id: "2", nombre: "Energia metabolizable", sigla: "Emt", unidad: "mcal/d" },
+    { id: "2.1", nombre: "Energia metabolizable para mantenimiento", sigla: "EMm", unidad: "mcal/d" },
+    { id: "2.2", nombre: "Energia metabolizable para ganancia", sigla: "Emg", unidad: "mcal/d" },
+    { id: "3", nombre: "Nutrientes digestibles totales", sigla: "NDT", unidad: "kg/d" },
+    { id: "4", nombre: "Proteina bruta y proteina cruda aparente", sigla: "PB PCA", unidad: "g/d" },
+    { id: "4.1", nombre: "Proteína Metabolizable de mantenimiento", sigla: "PMm", unidad: "g/d" },
+    { id: "4.2", nombre: "Proteína Metabolizable de Ganancia Proteína Cruda Aparente", sigla: "PMg PCA<340 KG", unidad: "g/d" },
+    { id: "4.3", nombre: "Proteína Metabolizable de Ganancia Proteína Cruda Aparente", sigla: "PMg PCA>340 KG", unidad: "g/d" },
+    { id: "4.4", nombre: "Proteína Metabolizable Total Proteína Cruda Aparente", sigla: "PMT PCA <340 KG", unidad: "g/d" },
+    { id: "4.5", nombre: "Proteína Metabolizable Total Proteína Cruda Aparente", sigla: "PMT PCA >340 KG", unidad: "g/d" },
+    { id: "4.6", nombre: "Proteína Degradada en el Rumen o Proteína Bruta Microbiana", sigla: "PDR O Pbmic (g/d)>340 KG", unidad: "g/d" },
+    { id: "4.7", nombre: "Proteína Degradada en el Rumen o Proteína Bruta Microbiana", sigla: "PDR O Pbmic (g/d) >340 KG", unidad: "g/d" },
+    { id: "4.8", nombre: "Proteína No Degradable en el Rumen Proteína Cruda Aparente", sigla: "PNDR PCA <340 KG", unidad: "g/d" },
+    { id: "4.9", nombre: "Proteína No Degradable en el Rumen Proteína Cruda Aparente", sigla: "PNDR PCA >340 KG", unidad: "g/d" },
+    { id: "5", nombre: "Proteina bruta y proteina cruda aparente", sigla: "PB PCA", unidad: "g/d" },
+    { id: "6", nombre: "Calcio dietario total", sigla: "CaDT", unidad: "g/d" },
+    { id: "6.1", nombre: "Calcio dietario  para mantenimiento", sigla: "CaDm", unidad: "g/d" },
+    { id: "6.2", nombre: "Calcio dietario para ganancia", sigla: "CaDg", unidad: "g/d" },
+    { id: "7", nombre: "Fosforo dietario total", sigla: "P-DT", unidad: "g/d" },
+    { id: "7.1", nombre: "Fosforo dietario para mantenimiento", sigla: "P-Dm", unidad: "g/d" },
+    { id: "7.2", nombre: "Fosforo dietario para ganancia", sigla: "P-Dg", unidad: "g/d" },
+    { id: "7.3", nombre: "Relacion calcio fosforo", sigla: "Ca/P", unidad: "" },
+    { id: "8", nombre: "Magnesio dietario total", sigla: "MgDT", unidad: "g/d" },
+    { id: "8.1", nombre: "Magnesio dietario para mantenimiento", sigla: "MgDm", unidad: "g/d" },
+    { id: "8.2", nombre: "Magnecio deietario para ganancia", sigla: "MgDg", unidad: "g/d" },
+    { id: "9", nombre: "Sodio dietario total", sigla: "NaDT", unidad: "g/d" },
+    { id: "9.1", nombre: "Sodio dietario para mantenimiento", sigla: "NaDm", unidad: "g/d" },
+    { id: "9.2", nombre: "Sodio deitario para ganancia", sigla: "NaDg", unidad: "g/d" },
+    { id: "10", nombre: "Potacio dietario total", sigla: "KDT", unidad: "g/d" },
+    { id: "10.1", nombre: "Potacio dietario para mantenimiento", sigla: "KDm", unidad: "g/d" },
+    { id: "10.2", nombre: "Potacio dietario para ganancia", sigla: "KDg", unidad: "g/d" },
+    { id: "11", nombre: "Azufre dietario total", sigla: "SDT", unidad: "g/d" },
+    { id: "11.1", nombre: "Azufre dietario para mantenimiento", sigla: "SDm", unidad: "g/d" },
+    { id: "11.2", nombre: "Azufre dietario para ganancia", sigla: "SDG", unidad: "g/d" },
+    { id: "12", nombre: "Cobre dietario total", sigla: "CuDT", unidad: "mg/d" },
+    { id: "12.1", nombre: "Cobre dietario para mantenimiento", sigla: "CuDm", unidad: "mg/d" },
+    { id: "12.2", nombre: "Cobre dietario para ganacia", sigla: "CuDg", unidad: "mg/d" },
+    { id: "13", nombre: "Cobalto dietario total", sigla: "CoDT", unidad: "mg/d" },
+    { id: "13.1", nombre: "Cobalto dietario para mantenimiento", sigla: "CoDm", unidad: "mg/d" },
+    { id: "13.2", nombre: "Cobalto dietario para ganacia", sigla: "CoDg", unidad: "mg/d" },
+    { id: "14", nombre: "Hierro dietario total", sigla: "FeDT", unidad: "mg/d" },
+    { id: "14.1", nombre: "Hierro dietario para mantenimiento", sigla: "FeDm", unidad: "mg/d" },
+    { id: "14.2", nombre: "Hierro dietario para ganancia", sigla: "FeDg", unidad: "mg/d" },
+    { id: "15", nombre: "Manganeso dietario total", sigla: "MnDT", unidad: "mg/d" },
+    { id: "15.1", nombre: "Manganeso dietario para mantenimineto", sigla: "MnDm", unidad: "mg/d" },
+    { id: "15.2", nombre: "Manganeso dietario para ganancia", sigla: "MnDg", unidad: "mg/d" },
+    { id: "16", nombre: "Selenio dietario total", sigla: "SeDT", unidad: "mg/d" },
+    { id: "16.1", nombre: "Selenio dietario para mantenimiento", sigla: "SeDm", unidad: "mg/d" },
+    { id: "16.2", nombre: "Selenio dietario para ganancia", sigla: "SeDg", unidad: "mg/d" },
+    { id: "17", nombre: "Zinc dietario total", sigla: "ZnDT", unidad: "mg/d" },
+    { id: "17.1", nombre: "Zinc dietario para mantenimineto", sigla: "ZnDm", unidad: "mg/d" },
+    { id: "17.2", nombre: "Zinc dietario para ganancia", sigla: "ZnDg", unidad: "mg/d" },
+    { id: "18", nombre: "Yodo dietario total", sigla: "IDT", unidad: "mg/d" },
+    { id: "19", nombre: "Fibra detergente neutro", sigla: "FDN", unidad: "kg/d" },
+    { id: "20", nombre: "Extracto etereo", sigla: "EE", unidad: "kg/d" },
+    { id: "21", nombre: "Carbohidratos no fibrosos", sigla: "CNF", unidad: "kg/d" },
+    { id: "22", nombre: "Constante de agua", sigla: "H2O", unidad: "L" },
+];
+
+export function buildHierarchy(rows) {
+    const withParent = rows.map(r => ({ ...r, parent: r.id.includes(".") ? r.id.split(".")[0] : null }));
+    const childrenByParent = withParent.reduce((acc, r) => {
+        if (r.parent) (acc[r.parent] ||= []).push(r);
+        return acc;
+    }, {});
+    const parentsWithChildren = new Set(Object.keys(childrenByParent));
+    const topLevel = withParent.filter(r => !r.parent);
+    return { topLevel, childrenByParent, parentsWithChildren };
+}

@@ -1,0 +1,87 @@
+:root {
+  --verde-oscuro: #00482B;
+  --verde-medio: #007B3E;
+  --dorado: #DAAA00;
+  --texto-blanco: #ffffff;
+}
+
+/* NAVBAR GENERAL */
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background: var(--verde-oscuro);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Línea inferior con degradado verde → dorado */
+.navbar::after {
+  content: "";
+  display: block;
+  height: 3px;
+  background: linear-gradient(90deg, var(--verde-medio) 0%, var(--dorado) 100%);
+}
+
+/* Contenedor principal */
+.nav {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 8px 16px;
+  display: flex;
+  align-items: center;
+}
+
+/* BLOQUE LOGO + TEXTO + MENÚ */
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 24px; /* espacio general entre logo, nombre y menú */
+}
+.brand-logo {
+  width: 35px;
+  height: auto;
+}
+.brand-name {
+  font-weight: 800;
+  color: var(--dorado);
+  letter-spacing: 0.3px;
+  margin-right: 24px;
+}
+
+/* MENÚ (pegado al nombre) */
+.menu {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  gap: 24px;
+  padding: 0;
+  margin: 0;
+}
+.link {
+  color: var(--texto-blanco);
+  text-decoration: none;
+  font-weight: 500;
+  border-bottom: 2px solid transparent;
+  transition: border-color 0.25s ease, opacity 0.25s ease;
+}
+.link:hover,
+.link.active {
+  border-bottom: 2px solid var(--dorado);
+  opacity: 0.95;
+}
+
+/* Responsivo */
+@media (max-width: 860px) {
+  .nav {
+    flex-direction: column;
+    gap: 8px;
+  }
+  .brand {
+    flex-direction: column;
+    gap: 6px;
+  }
+  .menu {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}

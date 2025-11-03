@@ -1,0 +1,103 @@
+.dbal {
+  padding: 20px;
+  font-family: "Poppins", sans-serif;
+}
+
+.dbal-title {
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: #004d25;
+  margin-bottom: 10px;
+  border-bottom: 2px solid #76b947;
+  padding-bottom: 4px;
+}
+
+.dbal-info {
+  margin-bottom: 25px;
+}
+
+.dbal-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 10px;
+}
+
+.dbal-cell {
+  background: #f9f9f9;
+  padding: 10px 12px;
+  border-radius: 8px;
+  box-shadow: 0 0 2px rgba(0,0,0,0.1);
+}
+
+.dbal-label {
+  display: block;
+  font-weight: 500;
+  color: #004d25;
+}
+
+.dbal-value {
+  color: #333;
+  font-size: 0.95rem;
+}
+
+/* Tabla de detalles */
+.dbal-table-container {
+  overflow-x: auto;
+  margin-top: 10px;
+}
+
+.dbal-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.9rem;
+}
+
+.dbal-table th,
+.dbal-table td {
+  border: 1px solid #ddd;
+  padding: 6px 8px;
+  text-align: center;
+}
+
+.dbal-table th {
+  background: #76b947;
+  color: white;
+  font-weight: 600;
+}
+
+.dbal-table tr:nth-child(even) {
+  background: #f5f5f5;
+}
+
+.dbal-table tr:hover {
+  background: #e6f4ea;
+}
+
+.dbal-empty {
+  background: #fff8e1;
+  padding: 12px;
+  border-radius: 6px;
+  text-align: center;
+  color: #9c6f00;
+  font-weight: 500;
+}
+
+.dbal-actions {
+  margin-top: 20px;
+  text-align: right;
+}
+
+.dbal-btn {
+  background: linear-gradient(90deg, #1c5d3f, #a6ce39);
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.3s;
+  font-weight: 500;
+}
+
+.dbal-btn:hover {
+  opacity: 0.9;
+}

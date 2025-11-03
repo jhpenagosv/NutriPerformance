@@ -1,0 +1,164 @@
+:root {
+  --np-green: #0b6b3a;
+  --np-green-light: #e8f5e9; /* Verde claro para subfilas */
+  --np-green-open: #c8e6c9; /* Verde más oscuro para fila abierta */
+  --np-gold: #c89b1d;
+  --uc-gray-200: #e5e7eb;
+  --uc-gray-900: #0f172a;
+  --uc-white: #fff;
+}
+
+/* ======== CONTENEDOR PRINCIPAL ======== */
+.rn {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1.5rem;
+}
+
+.rn__wrap {
+  background: var(--uc-white);
+  border: 1px solid var(--uc-gray-200);
+  border-radius: 8px;
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.05);
+}
+
+.rn__scroll {
+  overflow-x: auto;
+}
+
+/* ======== TABLA ======== */
+.rn__table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 900px;
+  font-size: 0.95rem;
+}
+
+.rn__head {
+  background: linear-gradient(90deg, var(--np-green), var(--np-gold));
+  color: #fff;
+  text-align: left;
+}
+
+.rn__table th,
+.rn__table td {
+  padding: 12px 14px;
+  border-bottom: 1px solid var(--uc-gray-200);
+}
+
+/* ======== FILAS ======== */
+
+/* Fila principal cuando está expandida */
+tr.is-open-parent {
+  background: var(--np-green-open);
+  transition: background 0.3s ease;
+}
+
+/* Subfilas (cuando están desplegadas) */
+.rn__child {
+  background: var(--np-green-light);
+  transition: background 0.3s ease;
+}
+
+.rn__child-name {
+  position: relative;
+  padding-left: 16px;
+}
+
+.is-hidden {
+  display: none;
+}
+
+/* ======== BOTÓN DE LUPA ======== */
+.rn__iconbtn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border-radius: 8px;
+  border: 1px solid var(--uc-gray-200);
+  background: #fff;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.rn__iconbtn:hover {
+  box-shadow: 0 0 0 3px rgba(11, 107, 58, 0.15);
+}
+
+.rn__icon {
+  width: 18px;
+  height: 18px;
+  color: var(--np-green);
+  transition: transform 0.2s ease;
+}
+
+/* Lupa rota al abrir */
+.is-open .rn__icon {
+  transform: rotate(45deg);
+}
+
+/* ======== BOTONES INFERIORES ======== */
+.step-buttons {
+  display: flex;
+  justify-content: center; /* 🔹 Centrados */
+  gap: 12px;
+  margin-top: 24px;
+}
+
+.btn-step {
+  font-weight: 700;
+  padding: 10px 26px;
+  border-radius: 8px;
+  font-size: 15px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  border: none;
+}
+
+/* Botón ATRÁS */
+.btn-prev {
+  background-color: #f7faf9;
+  color: var(--np-green);
+  border: 2px solid var(--np-green);
+}
+.btn-prev:hover {
+  background-color: #e6f0ea;
+}
+
+/* Botón SIGUIENTE (DORADO) */
+.btn-next {
+  background-color: var(--np-gold);
+  color: #fff;
+}
+.btn-next:hover {
+  background-color: #b88d14;
+}
+
+/* ======== RESPONSIVE ======== */
+@media (max-width: 900px) {
+  .rn__table {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .rn {
+    padding: 1rem;
+  }
+
+  .rn__table th,
+  .rn__table td {
+    padding: 10px;
+  }
+
+  .btn-step {
+    padding: 10px 20px;
+  }
+}
+/* Oculta completamente la primera columna (ID) */
+.rn__table td:first-child,
+.rn__table th:first-child {
+  display: none;
+}

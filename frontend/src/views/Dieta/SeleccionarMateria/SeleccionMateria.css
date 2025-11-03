@@ -1,0 +1,259 @@
+:root {
+  --np-green: #0c5a3f;
+  --np-gold: #d4a017;
+  --np-border: #e5e7eb;
+}
+
+/* ===== Layout general ===== */
+.selmat-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px;
+  padding: 14px;
+}
+
+/* ===== Toolbar de búsqueda ===== */
+.selmat-toolbar {
+  grid-column: span 2;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.selmat-search {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.selmat-search input {
+  flex: 1 1 220px;
+  padding: 6px 10px;
+  border-radius: 8px;
+  border: 1px solid var(--np-border);
+  outline: none;
+}
+.selmat-search input:focus {
+  border-color: var(--np-green);
+  box-shadow: 0 0 0 2px rgba(12, 90, 63, 0.15);
+}
+
+.selmat-select {
+  padding: 6px 8px;
+  border-radius: 8px;
+  border: 1px solid var(--np-border);
+  outline: none;
+}
+.selmat-select:focus {
+  border-color: var(--np-green);
+  box-shadow: 0 0 0 2px rgba(12, 90, 63, 0.15);
+}
+
+/* ===== Paneles ===== */
+.selmat-panel {
+  background: #fff;
+  border: 1px solid var(--np-border);
+  border-radius: 12px;
+  padding: 12px;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ===== Título con línea debajo ===== */
+.panel-title {
+  font-weight: 800;
+  color: var(--np-green);
+  margin: 0 0 10px 0;
+  display: flex;
+  flex-direction: column; /* línea debajo */
+  align-items: flex-start;
+  gap: 6px;
+}
+
+.panel-title .line {
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg, var(--np-green), var(--np-gold));
+  border-radius: 2px;
+}
+
+/* ===== Lista con scroll ===== */
+.list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.scroll-area {
+  flex: 1;
+  overflow-y: auto;
+  max-height: 330px;
+  border-radius: 8px;
+  border: 1px solid #e4e4e7;
+}
+
+/* ===== Fila ===== */
+.row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 6px 10px;
+  border-bottom: 1px solid #f1f5f9;
+  cursor: pointer;
+  transition: background 0.25s ease;
+}
+
+.row:hover {
+  background-color: #f7faf9;
+}
+
+.row:last-child {
+  border-bottom: none;
+}
+
+.row .name {
+  font-weight: 600;
+  color: #1f2937;
+}
+
+/* ===== Estado seleccionado ===== */
+.list .row.selected,
+.list .row.active {
+  background-color: var(--np-green);
+  color: #fff;
+}
+
+.list .row.selected:hover,
+.list .row.active:hover {
+  background-color: #11724b;
+}
+
+.list .row.selected .name,
+.list .row.active .name {
+  color: #fff;
+}
+
+.list .row.selected .pill,
+.list .row.active .pill {
+  background: rgba(255, 255, 255, 0.18);
+  border-color: rgba(255, 255, 255, 0.35);
+  color: #fff;
+}
+
+.list .row.selected .pill.neutral,
+.list .row.active .pill.neutral {
+  background: rgba(255, 215, 0, 0.25);
+  border-color: rgba(255, 215, 0, 0.45);
+  color: #fff;
+}
+
+/* ===== Píldoras ===== */
+.pill {
+  background: #eef7f1;
+  border: 1px solid #cfe7d9;
+  padding: 2px 8px;
+  border-radius: 999px;
+  font-size: 0.85rem;
+  color: var(--np-green);
+}
+
+.pill.neutral {
+  background: #fff8e5;
+  border-color: #f7e3a3;
+  color: #a66c00;
+}
+
+/* ===== Acciones de temporales ===== */
+.temp-actions {
+  display: flex;
+  justify-content: space-between;
+  gap: 8px;
+  margin-top: 8px;
+  flex-wrap: wrap;
+}
+
+.btn-danger-outline {
+  border: 1px solid #dc2626;
+  background: #fff;
+  color: #b91c1c;
+  font-weight: 600;
+  border-radius: 8px;
+  padding: 6px 10px;
+  cursor: pointer;
+  transition: 0.15s ease;
+}
+.btn-danger-outline:hover {
+  background: #fee2e2;
+}
+
+/* ===== Botones comunes ===== */
+.btn-gold {
+  background: var(--np-gold);
+  color: #1b1b1b;
+  font-weight: 700;
+  border: none;
+  border-radius: 8px;
+  padding: 7px 14px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+.btn-gold:hover {
+  filter: brightness(0.95);
+}
+
+.btn.ghost {
+  border-radius: 8px;
+  padding: 8px 16px;
+  font-weight: 700;
+  cursor: pointer;
+  border: 1px solid var(--np-green);
+  background: #edf5ef;
+  color: var(--np-green);
+}
+.btn.ghost:hover {
+  background: #e5efe9;
+}
+
+/* ===== Footer ===== */
+.selmat-footer {
+  grid-column: span 2;
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 10px;
+}
+
+/* ===== Estado vacío ===== */
+.empty {
+  text-align: center;
+  color: #6b7280;
+  padding: 8px;
+  font-size: 0.9rem;
+}
+
+/* ===== Refuerzo por si hay estilos globales que pisan .row.selected ===== */
+.selmat-panel .list .row.selected,
+.selmat-panel .list .row.active {
+  background-color: var(--np-green);
+  color: #fff;
+}
+.selmat-panel .list .row.selected:hover,
+.selmat-panel .list .row.active:hover {
+  background-color: #11724b;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 900px) {
+  .selmat-grid {
+    grid-template-columns: 1fr;
+  }
+  .selmat-footer {
+    grid-column: span 1;
+  }
+  .scroll-area {
+    max-height: 280px;
+  }
+}

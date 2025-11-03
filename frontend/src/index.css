@@ -1,0 +1,10 @@
+:root {
+  --fuente-principal: "Montserrat", "Century Gothic", sans-serif;
+}
+
+body {
+  font-family: var(--fuente-principal);
+  background-color: #f6f8f7;
+  color: var(--gris);
+  min-height: 100vh;
+}

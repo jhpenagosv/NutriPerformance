@@ -1,0 +1,16 @@
+{
+  "short_name": "NutriPerformance",
+  "name": "NutriPerformance — Optimización de dietas bovinas",
+  "icons": [
+    {
+      "src": "logo.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ],
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#00512D",
+  "background_color": "#ffffff",
+  "description": "Aplicación web para la formulación y optimización de dietas bovinas desarrollada por la Universidad de Cundinamarca."
+}

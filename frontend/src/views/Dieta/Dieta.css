@@ -1,0 +1,88 @@
+:root{
+  --np-green:#00482B;
+  --np-green-2:#0a5a42;
+  --np-gold:#DAAA00;
+  --np-bg:#f6f8f7;
+  --np-border:#e3efe9;
+  --np-white:#fff;
+  --shadow:0 8px 24px rgba(0,0,0,.06);
+  --radius:14px;
+}
+
+.diet-page{
+  background: var(--np-bg);
+  padding: 20px 16px 40px;
+}
+
+/* Título */
+.diet-title{
+  margin: 10px 0 6px;
+  text-align: center;
+  color: var(--np-green-2);
+  font-size: 38px;
+  font-weight: 800;
+  letter-spacing: .5px;
+}
+.diet-underline{
+  width: 220px;
+  height: 6px;
+  border-radius: 999px;
+  margin: 8px auto 22px;
+  background: linear-gradient(90deg, var(--np-green) 0%, var(--np-gold) 100%);
+}
+
+/* Acordeón */
+.diet-acc{
+  max-width: 1100px;
+  margin: 0 auto;
+  display: grid;
+  gap: 12px;
+}
+
+.diet-acc-item{
+  background: var(--np-white);
+  border: 1px solid var(--np-border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  overflow: hidden;
+}
+
+.diet-acc-header{
+  width: 100%;
+  padding: 14px 18px;
+  text-align: left;
+  background: #f0faf5;
+  border: none;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+  color: var(--np-green-2);
+  font-weight: 800;
+  letter-spacing: .2px;
+}
+
+.diet-caret{
+  width: 0;
+  height: 0;
+  border-left: 8px solid var(--np-green-2);
+  border-top: 6px solid transparent;
+  border-bottom: 6px solid transparent;
+  transition: transform .18s ease;
+}
+.diet-caret.rot{ transform: rotate(90deg); }
+
+.diet-acc-title{ font-size: 14px; }
+
+.diet-acc-panel{
+  background: var(--np-white);
+  padding: 16px 18px 20px;
+}
+
+/* Responsivo */
+@media (max-width: 720px){
+  .diet-title{ font-size: 30px; }
+  .diet-acc{ gap: 10px; }
+  .diet-acc-header{ padding: 12px 14px; }
+  .diet-acc-panel{ padding: 14px; }
+}

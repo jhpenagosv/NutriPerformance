@@ -1,0 +1,4 @@
+.main-content {
+  /* antes: padding: 60px 20px; */
+  padding: 0 20px 60px;  /* sin padding-top */
+}
